@@ -35,13 +35,6 @@ const Assessibility = () => {
       <meta name="full-screen" content="yes" />
       <meta name="browsermode" content="application" />
 
-      <meta name="nightmode" content="enable/disable" />
-
-      <meta name="layoutmode" content="fitscreen/standard" />
-
-      <meta name="imagemode" content="force" />
-
-      <meta name="screen-orientation" content="portrait" />
 
       <link rel="manifest" href="/manifest.json" />
       <link href="/favicon.ico" rel="icon" />

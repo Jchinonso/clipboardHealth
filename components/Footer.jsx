@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <div
       className="flex w-full p-8 flex-col lg:flex-row bg-white mt-5 border border-gray-200"
-      style={{ display: "flex", flexDirection: "row" }}
+
     >
       <div className="flex flex-col lg:w-1/2 text-xs m-3">
         <span className="break-word font-medium text-xl mb-2">About us</span>

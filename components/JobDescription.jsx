@@ -23,7 +23,7 @@ const JobDescription = React.memo(
         <button
           onClick={handleOnClick}
           aria-label="description"
-          className="focus:outline-none flex lg:flex-row justify-between lg:items-center w-full py-4 px-1 border-t border-gray-200"
+          className="focus:outline-none flex lg:flex-row flex-col justify-between lg:items-center w-full py-4 px-1 border-t border-gray-200"
         >
           <div className="flex items-start text-left flex-col">
             <span className="font-bold">{title}</span>
@@ -35,7 +35,7 @@ const JobDescription = React.memo(
         </button>
         {isExpanded && (
           <div
-            className="flex lg:flex-row w-full lg:items-center"
+            className="flex flex-col lg:flex-row w-full lg:items-center"
             style={{ visibility: isExpanded ? "visible" : "hidden" }}
           >
             <div className="flex flex-1 flex-col p-1">

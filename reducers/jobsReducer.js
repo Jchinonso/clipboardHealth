@@ -36,21 +36,18 @@ const jobsReducer = (state, action) => {
       return {
         ...state,
         jobs: { ...action.payload },
-        sortby: { ...state.sortby, department: action.queryString },
       };
     }
     case GET_SORTED_ARRAY_BY_EDUCATION: {
       return {
         ...state,
         jobs: { ...action.payload },
-        sortby: { ...state.sortby, required_credentials: action.queryString },
       };
     }
     case GET_SORTED_ARRAY_BY_ROLE: {
       return {
         ...state,
         jobs: { ...action.payload },
-        sortby: { ...state.sortby, required_skills: action.queryString },
       };
     }
     case GET_SORTED_ARRAY_BY_LOCATION: {
@@ -58,14 +55,12 @@ const jobsReducer = (state, action) => {
       return {
         ...state,
         jobs: { ...action.payload },
-        sortby: { ...state.sortby, location: action.queryString },
       };
     }
     case GET_SORTED_ARRAY_BY_EXPERIENCE: {
       return {
         ...state,
         jobs: { ...action.payload },
-        sortby: { ...state.sortby, experience: action.queryString },
       };
     }
     default: {

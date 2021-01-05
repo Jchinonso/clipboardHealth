@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import axios from "axios";
 import * as types from "../contants/actionTypes";
+import { sortBy } from "../utils";
 
 const JOB_URL = "/api/jobs";
 
@@ -78,65 +79,60 @@ const getJobsAction = (reducer, initialState) => {
       throw e;
     }
   };
-  const getSortedArrayByLocation = async (params) => {
+  const getSortedArrayByLocation = (sortType, order, array) => {
     try {
-      const response = await axios.get(JOB_URL, { params });
+      const response = sortBy(sortType, order, array);
       dispatch({
         type: types.GET_SORTED_ARRAY_BY_LOCATION,
-        payload: response.data,
-        queryString: params.sortBy,
+        payload: { jobs: response },
       });
     } catch (e) {
       throw e;
     }
   };
 
-  const getSortedArrayByRole = async (params) => {
+  const getSortedArrayByRole = (sortType, order, array) => {
     try {
-      const response = await axios.get(JOB_URL, { params });
+      const response = sortBy(sortType, order, array);
       dispatch({
         type: types.GET_SORTED_ARRAY_BY_ROLE,
-        payload: response.data,
-        queryString: params.sortBy,
+        payload: { jobs: response },
       });
     } catch (e) {
       throw e;
     }
   };
 
-  const getSortedArrayByDept = async (params) => {
+  const getSortedArrayByDept = (sortType, order, array) => {
     try {
-      const response = await axios.get(JOB_URL, { params });
+      const response = sortBy(sortType, order, array);
       dispatch({
         type: types.GET_SORTED_ARRAY_BY_DEPT,
-        payload: response.data,
-        queryString: params.sortBy,
+        payload: { jobs: response },
       });
     } catch (e) {
       throw e;
     }
   };
 
-  const getSortedArrayByEducation = async (params) => {
+  const getSortedArrayByEducation = (sortType, order, array) => {
     try {
-      const response = await axios.get(JOB_URL, { params });
+      const response = sortBy(sortType, order, array);
       dispatch({
         type: types.GET_SORTED_ARRAY_BY_EDUCATION,
-        payload: response.data,
-        queryString: params.sortBy,
+        payload: { jobs: response },
       });
     } catch (e) {
       throw e;
     }
   };
 
-  const getSortedArrayByExperience = async (params) => {
+  const getSortedArrayByExperience = (sortType, order, array) => {
     try {
-      const response = await axios.get(JOB_URL, { params });
+      const response = sortBy(sortType, order, array);
       dispatch({
         type: types.GET_JOBS_BY_EXPERIENCE,
-        payload: response.data,
-        queryString: params.sortBy,
+        payload: { jobs: response },
       });
     } catch (e) {
       throw e;

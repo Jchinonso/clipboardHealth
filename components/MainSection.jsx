@@ -22,14 +22,13 @@ const MainSection = React.memo(() => {
     if (state === "desc") order = "";
     setSortState({
       ...sortState,
-      [sortType]: order,
+      [sortType]: order
     });
 
     if (order) {
-      handler({ sortBy: `${sortType}:${order}` });
+      handler(sortType, order, value.jobs.jobs);
     }
   };
-
   return (
     <div className="flex flex-col flex-1 p-4 bg-white border border-gray-200 text-xs">
       <div className="flex justify-between mb-6 mt-4">

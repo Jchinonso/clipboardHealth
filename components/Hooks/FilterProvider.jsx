@@ -1,7 +1,7 @@
 import React from "react";
 import getFiltersAction from "../../actions/getFiltersAction";
 import getJobsAction from "../../actions/getJobsAction";
-import getSortAction from "../../actions/getSortAction";
+
 import filterReducer from "../../reducers/filterReducer";
 import jobsReducer from "../../reducers/jobsReducer";
 
@@ -41,33 +41,9 @@ const FilterProvider = (props) => {
     getSortedArrayByLocation,
     getSortedArrayByExperience,
   } = getJobsAction(jobsReducer, {
-    jobs: null,
-    sortby: {
-      location: "",
-      experience: "",
-      department: "",
-      required_credentials: "",
-      required_skills: "",
-    },
+    jobs: null
   });
 
-  // const {
-  //   state: sorts,
-  //   getSortedArrayByDept,
-  //   getSortedArrayByEducation,
-  //   getSortedArrayByRole,
-  //   getSortedArrayByLocation,
-  //   getSortedArrayByExperience,
-  // } = getSortAction(jobsReducer, {
-  //   jobs: null,
-  // sortby: {
-  //   location: "",
-  //   experience: "",
-  //   department: "",
-  //   required_credentials: "",
-  //   required_skills: "",
-  // },
-  // });
   const [modalToggle, setModalToggle] = React.useState(false);
 
   React.useEffect(async () => {

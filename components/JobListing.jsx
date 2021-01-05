@@ -9,7 +9,7 @@ const JobListing = React.memo(({ positions, name, list }) => {
       {positions > 0 ? (
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex flex-col m-2 focus:outline-none"
+          className="flex m-2 focus:outline-none"
           aria-label="listing"
         >
           <div className="flex items-center">

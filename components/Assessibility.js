@@ -14,6 +14,32 @@ const Assessibility = () => {
       <meta name="keywords" content="Keywords" />
       <title>ClipboardHealth</title>
 
+      <meta name="theme-color" content="red" />
+      <meta name="mobile-web-app-capable" content="yes" />
+
+      <meta name="apple-mobile-web-app-title" content="Application Title" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+      <meta name="msapplication-navbutton-color" content="red" />
+      <meta name="msapplication-TileColor" content="red" />
+      <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+      <meta name="msapplication-config" content="browserconfig.xml" />
+
+      <meta name="application-name" content="Application Name" />
+      <meta name="msapplication-tooltip" content="Tooltip Text" />
+      <meta name="msapplication-starturl" content="/" />
+
+      <meta name="msapplication-tap-highlight" content="no" />
+
+      <meta name="full-screen" content="yes" />
+      <meta name="browsermode" content="application" />
+
+      <meta name="nightmode" content="enable/disable" />
+
+      <meta name="layoutmode" content="fitscreen/standard" />
+
+
       <link rel="manifest" href="/manifest.json" />
       <link href="/favicon.ico" rel="icon" />
       <link rel="stylesheet" href="/globals.css" />
@@ -23,4 +49,5 @@ const Assessibility = () => {
   );
 };
 
-export default Assessibility;
+
+export default Assessibility

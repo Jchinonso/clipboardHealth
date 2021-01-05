@@ -35,7 +35,7 @@ const JobDescription = React.memo(
         </button>
         {isExpanded && (
           <div
-            className="flex flex-col lg:flex-row w-full lg:items-center"
+            className="flex lg:flex-row w-full lg:items-center"
             style={{ visibility: isExpanded ? "visible" : "hidden" }}
           >
             <div className="flex flex-1 flex-col p-1">

@@ -51,7 +51,6 @@ const jobsReducer = (state, action) => {
       };
     }
     case GET_SORTED_ARRAY_BY_LOCATION: {
-      console.log(state);
       return {
         ...state,
         jobs: { ...action.payload },
